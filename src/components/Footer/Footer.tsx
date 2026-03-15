@@ -31,7 +31,7 @@ const Footer = () => {
             <button onClick={() => scrollTo("gallery")} className={linkClass}>Gallery</button>
             <button onClick={() => scrollTo("about")} className={linkClass}>About</button>
             <Link to="/inquire" className={linkClass}>Inquire</Link>
-            <button onClick={() => scrollTo("greeting-cards")} className={linkClass}>Cards</button>
+            {/* <button onClick={() => scrollTo("greeting-cards")} className={linkClass}>Cards</button> */}
           </div>
 
           {/* Contact */}

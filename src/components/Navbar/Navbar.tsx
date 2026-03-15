@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="hidden md:flex gap-10">
           <button onClick={() => scrollTo("gallery")}>Gallery</button>
           <button onClick={() => scrollTo("about")}>About</button>
-          <button onClick={() => scrollTo("greeting-cards")}>Cards</button>
+          {/* <button onClick={() => scrollTo("greeting-cards")}>Cards</button> */}
         </div>
 
         {/* Actions */}

@@ -18,7 +18,7 @@ const HomePage = () => (
     <Hero />
     <Gallery />
     <About />
-    <GreetingCards />
+    {/* <GreetingCards /> */}
     <Footer />
   </>
 );

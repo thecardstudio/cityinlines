@@ -77,7 +77,7 @@ const ProductPage = () => {
             {/* Custom note */}
             <div className="flex gap-3 text-sm text-ink-400 border border-ink-700 bg-ink-900 p-4 mb-6 leading-relaxed">
               <span className="text-amber-500 shrink-0">✦</span>
-              <span>This artwork can be customised with your city or landmark. Mention it in the inquiry.</span>
+              <span>We also do custom commissions of any landmark that means something to you, send an inquiry now.</span>
             </div>
 
             <div className="h-px bg-ink-700 my-6" />

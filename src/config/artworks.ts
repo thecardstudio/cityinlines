@@ -17,14 +17,18 @@ export const SITE_CONFIG: SiteConfig = {
 // PRICES — Edit here, changes reflect everywhere automatically
 // ============================================================
 export const PRICES: PriceMatrix = {
-  A5: { unframed: 350,  framed: 450  },
-  A4: { unframed: 700,  framed: 850  },
-  A3: { unframed: 900,  framed: 1200 },
+  A5: { unframed: 300,  framed: 400  },
+  A4: { unframed: 650,  framed: 800  },
+  A3: { unframed: 850,  framed: 1150 },
 };
 
 export const SIZES = ["A5", "A4", "A3"] as const;
 export const FRAME_OPTIONS = ["Unframed", "Framed"] as const;
 
+const withWatermark = (url: string): string => {
+  const parts = url.split("/upload/");
+  return `${parts[0]}/upload/l_text:helvetica_60:CityInLines,co_rgb:f0ebe0,o_40,g_center/${parts[1]}`;
+};
 // ============================================================
 // ARTWORKS — Replace imageUrl with your Cloudinary URLs
 // To add a new artwork: copy one object, paste at end, update fields
@@ -32,38 +36,38 @@ export const FRAME_OPTIONS = ["Unframed", "Framed"] as const;
 export const ARTWORKS: Artwork[] = [
   {
     id: 1,
-    title: "Charminar at Dusk",
+    title: "Buddha at Dusk",
     city: "Hyderabad",
-    description: "The iconic monument rendered in 3,000 lines of crosshatching ink.",
+    description: "Serene Buddha overlooking the bustling city",
     category: "timeless-deccan",
-    imageUrl: "https://res.cloudinary.com/ddn9iuahl/image/upload/v1773391611/bd6fafad_wm02hu.jpg",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/Buddha_mexzwa.jpg"),
     available: true,
   },
   {
     id: 2,
-    title: "Tank Bund Silhouette",
+    title: "Cyber Towers",
     city: "Hyderabad",
-    description: "The twin cities reflected in still water, captured in intricate linework.",
-    category: "timeless-deccan",
-    imageUrl: "https://placehold.co/800x1000/1a1915/d4a853?text=Tank+Bund",
+    description: "The pioneering IT landmark that marked the beginning of Hyderabad’s transformation into a global technology hub.",
+    category: "cyberabad-horizons",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/Cyber_Towers_hbimrs.jpg"),
     available: true,
   },
   {
     id: 3,
-    title: "Golconda Fortress",
+    title: "Charminar",
     city: "Hyderabad",
-    description: "Ancient stone walls and battlements traced in fine crosshatching.",
+    description: "The iconic historical landmark in a vantage view",
     category: "timeless-deccan",
-    imageUrl: "https://placehold.co/800x1000/1a1915/d4a853?text=Golconda",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/Charminar_sjdcxc.jpg"),
     available: true,
   },
-  {
+ {
     id: 4,
-    title: "Hussain Sagar",
+    title: "Ikea Flyover",
     city: "Hyderabad",
-    description: "The heart-shaped lake and Buddha statue in monochrome ink.",
+    description: "A sweeping urban flyover marking Hyderabad’s modern tech corridor.",
     category: "cyberabad-horizons",
-    imageUrl: "https://placehold.co/800x1000/1a1915/d4a853?text=Hussain+Sagar",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/Ikea_Flyover_qetaa3.jpg"),
     available: true,
   },
   {
@@ -71,26 +75,35 @@ export const ARTWORKS: Artwork[] = [
     title: "Birla Mandir",
     city: "Hyderabad",
     description: "White marble temple on granite hill, rendered in layered hatching.",
-    category: "cyberabad-horizons",
-    imageUrl: "https://placehold.co/800x1000/1a1915/d4a853?text=Birla+Mandir",
+    category: "timeless-deccan",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/Birla_Mandir_vtz7fh.jpg"),
     available: true,
   },
-  {
+   {
     id: 6,
-    title: "Laad Bazaar Archway",
+    title: "Durgam Cheruvu Cable Bridge",
     city: "Hyderabad",
-    description: "The bangle market's ornate gateway in dense, intricate linework.",
+    description: "The cable bridge connecting Hyderabad's Tech district with modern skyline backdrop",
     category: "cyberabad-horizons",
-    imageUrl: "https://placehold.co/800x1000/1a1915/d4a853?text=Laad+Bazaar",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/Durgam_Cheruvu_jbudta.jpg"),
     available: true,
   },
-  {
+ {
     id: 7,
-    title: "Falaknuma Palace",
+    title: "T-Works Junction",
     city: "Hyderabad",
-    description: "The sky-touching palace of the Nizams, detailed in fine ink.",
+    description: "",
     category: "cyberabad-horizons",
-    imageUrl: "https://placehold.co/800x1000/1a1915/d4a853?text=Falaknuma",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/T_Works_pdifsn.jpg"),
+    available: true,
+  },
+   {
+    id: 8,
+    title: "Secretariat",
+    city: "Hyderabad",
+    description: "Telangana's modern administrative center",
+    category: "cyberabad-horizons",
+    imageUrl: withWatermark("https://res.cloudinary.com/ddn9iuahl/image/upload/v1773567021/Secretariat_unvgd8.jpg"),
     available: true,
   },
 ];
